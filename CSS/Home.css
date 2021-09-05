@@ -1,0 +1,26 @@
+html {
+   background-color: rgb(14, 14, 14);
+}
+.generalFont {
+    color: rgb(224, 224, 224);
+    background-color: rgb(24, 24, 24);
+}
+html {
+    background-image: url('/images/istockphoto-1219392827-1024x1024.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.bigButton{
+    align-items: center;
+}
+.centre {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+.centre:hover{
+    box-shadow: 0 0 10px 10px rgb(255, 0, 0);
+}

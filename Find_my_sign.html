@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href="/CSS/Home.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZODIAC SIGN</title>
+</head>
+<body>
+<h1 class="generalFont" style="text-align: center;">ZODIAC SIGN FINDER</h1><br><br><br><br>
+
+<a class="generalFont" style="font-size:25px; margin-left: 40%; font-size: x-large;">Enter your date of birth: </a><br><br>
+
+<span  class="generalFont" style="margin-left: 38%; font-size: x-large;">Enter the day (1-31)</span>
+<input type="number" title="Enter Day(1-31)" max="31" id ="day"><br><br>
+
+<span class="generalFont" style="margin-left: 38%; font-size: x-large;">Enter the month (1-12)</span>
+<input id ="month" type="number" title="Enter Month(1-12)" max="12">
+
+<input id="submit" type="submit" onclick="zodiac()"><br><br><br>
+
+<h1 id="hide" class="generalFont" style="visibility:hidden; text-align: center;">Your Zodiac sign is: </h1>
+
+<h1 id = "zodiacSign" class="generalFont" style="text-align: center;"></h1>
+<br><br><br><br>
+<h1 style="text-align: center;"> <a href="/index.html" class="generalFont" >Back to Home</a></h1>
+
+
+
+</body>
+<script>
+    function zodiac()
+    {
+        
+        var day = parseInt(document.getElementById("day").value);
+        var month = parseInt(document.getElementById("month").value);
+
+        if(day < 1 || day > 31 || month < 1 || month > 12 ){
+            alert("invalid");
+        }
+        else{
+            
+            //alert("accepted");
+            month *= 100;
+            let value = month + day;
+            if(value >= 120 && value <= 218){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "AQUARIUS";
+            }
+            if(value >= 219 && value <= 320){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "PISCES";
+            }
+            else if(value >= 321 && value <= 419){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "ARIES";
+                
+            }
+            else if(value >= 420 && value <= 520){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "TAURUS";
+                
+            }
+            else if(value >= 521 && value <= 620){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "GEMINI";
+                
+            }
+            else if(value >= 621 && value <= 722){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "CANCER";
+                
+            }
+            else if(value >= 723 && value <= 822){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "LEO";
+                
+            }
+            else if(value >= 823 && value <= 922){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "VIRGO";
+                
+            }
+            else if(value >= 923 && value <= 1022){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "LIBRA";
+                
+            }
+            else if(value >= 1023 && value <= 1121){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "SCORPIO";
+                
+            }
+            else if(value >= 1122 && value <= 1221){
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "SAGITTARIUS";
+                
+            }
+            else{
+                document.getElementById("hide").style.visibility = "visible";
+                document.getElementById("zodiacSign").innerHTML = "CAPRICON";
+                
+            }
+        }
+    }
+</script>
+</html>
